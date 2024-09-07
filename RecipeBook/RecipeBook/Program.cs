@@ -1,6 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
-using RecipeBook.DAL;
+using RecipeBook.DAL.Data;
 
 namespace RecipeBook
 {

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeBook.DAL
+namespace RecipeBook.DAL.Data
 {
-    public class ApplicationDbContext
+    public class ApplicationDbContext : DbContext
     {
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
