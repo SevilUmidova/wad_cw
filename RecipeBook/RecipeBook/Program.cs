@@ -1,7 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using RecipeBook.DAL.Data;
-
+using RecipeBook.DAL.Services;
 namespace RecipeBook
 {
     public class Program
@@ -16,6 +16,7 @@ namespace RecipeBook
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
             builder.Services.AddControllers();
+            builder.Services.AddScoped<IRecipeCreate, RecipeCreate>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
